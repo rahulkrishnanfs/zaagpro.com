@@ -1,4 +1,4 @@
-export default function Logo({ size = 38 }) {
+export default function Logo({ size = 38, inkColor = 'var(--zp-ink)' }) {
   return (
     <span className="d-inline-flex align-items-center" style={{ gap: 10 }}>
       <svg
@@ -8,13 +8,7 @@ export default function Logo({ size = 38 }) {
         role="img"
         aria-label="Zaagpro Labs logo"
       >
-        <defs>
-          <linearGradient id="zpLogoGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stopColor="#10b981" />
-            <stop offset="1" stopColor="#2563eb" />
-          </linearGradient>
-        </defs>
-        <rect width="64" height="64" rx="16" fill="url(#zpLogoGrad)" />
+        <rect width="64" height="64" rx="16" fill="#6c4ff2" />
         <path
           d="M20 18h24L24 46h22"
           fill="none"
@@ -31,11 +25,11 @@ export default function Logo({ size = 38 }) {
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontWeight: 800,
             fontSize: '1.18rem',
-            color: 'var(--zp-ink)',
+            color: inkColor,
             letterSpacing: '-0.02em',
           }}
         >
-          Zaagpro <span className="zp-text-gradient">Labs</span>
+          Zaagpro <span style={{ color: 'var(--zp-brand)' }}>Labs</span>
         </span>
       </span>
     </span>

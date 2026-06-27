@@ -41,13 +41,11 @@ const groups = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#07161e', color: '#94a3b8', paddingTop: 60 }}>
+    <footer style={{ background: '#080726', color: '#a5a8c2', paddingTop: 60 }}>
       <Container>
         <Row className="g-5">
           <Col lg={4}>
-            <div style={{ filter: 'brightness(1.6)' }}>
-              <Logo />
-            </div>
+            <Logo inkColor="#fff" />
             <p className="mt-3" style={{ maxWidth: 320 }}>
               Agentic AI consulting and training for the enterprise. We help you
               design, build, and scale reliable AI agents — and grow the teams
@@ -103,7 +101,7 @@ export default function Footer() {
           className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 mt-5 py-4"
           style={{ borderTop: '1px solid rgba(255,255,255,0.1)', fontSize: '0.88rem' }}
         >
-          <span>© {new Date().getFullYear()} Zaagpro Labs. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} <span style={{ color: '#fff' }}>Zaagpro</span> Labs. All rights reserved.</span>
           <span>Built for the agentic enterprise.</span>
         </div>
       </Container>

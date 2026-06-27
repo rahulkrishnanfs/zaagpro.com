@@ -56,7 +56,7 @@ export default function Contact() {
       className="zp-section"
       style={{
         background:
-          'radial-gradient(900px 500px at 85% 0%, rgba(37,99,235,0.10), transparent 60%), radial-gradient(800px 480px at 0% 100%, rgba(16,185,129,0.10), transparent 55%), #0b1f2a',
+          '#0b1437',
       }}
     >
       <Container>

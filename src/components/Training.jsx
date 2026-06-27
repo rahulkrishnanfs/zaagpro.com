@@ -1,38 +1,83 @@
 import { Container, Row, Col } from 'react-bootstrap'
-import { FiArrowRight } from 'react-icons/fi'
+import {
+  FiArrowRight,
+  FiClock,
+  FiBarChart2,
+  FiVideo,
+  FiMessageSquare,
+  FiCode,
+  FiLink,
+  FiShare2,
+} from 'react-icons/fi'
 
 const tracks = [
   {
     tag: 'Anthropic',
     name: 'Claude',
-    accent: '#d97757',
+    icon: <FiMessageSquare />,
+    accent: '#6c4ff2',
+    level: 'Foundational → Advanced',
+    duration: '2 days',
+    format: 'Live / Remote',
     summary:
       'Master prompt engineering, tool use, and the Claude API to build safe, capable assistants and agents.',
-    topics: ['Prompt & context engineering', 'Tool use & MCP', 'Agentic workflows', 'Safety best practices'],
+    topics: [
+      'Prompt & context engineering',
+      'Tool use & MCP',
+      'Agentic workflows',
+      'Safety best practices',
+    ],
   },
   {
     tag: 'AI Code Editor',
     name: 'Cursor',
-    accent: '#0ea5e9',
+    icon: <FiCode />,
+    accent: '#6c4ff2',
+    level: 'All levels',
+    duration: '1 day',
+    format: 'Live / On-site',
     summary:
       'Turn your engineering org into an AI-native team that ships faster with Cursor agents and workflows.',
-    topics: ['Agent & composer mastery', 'Rules & project context', 'Codebase-wide refactors', 'Team rollout playbook'],
+    topics: [
+      'Agent & composer mastery',
+      'Rules & project context',
+      'Codebase-wide refactors',
+      'Team rollout playbook',
+    ],
   },
   {
     tag: 'Framework',
     name: 'LangChain',
-    accent: '#10b981',
+    icon: <FiLink />,
+    accent: '#6c4ff2',
+    level: 'Intermediate',
+    duration: '2 days',
+    format: 'Live / Remote',
     summary:
       'Build robust LLM applications with chains, retrieval, memory, and tool integrations that scale.',
-    topics: ['RAG pipelines', 'Memory & retrievers', 'Tool & API integration', 'Production patterns'],
+    topics: [
+      'RAG pipelines',
+      'Memory & retrievers',
+      'Tool & API integration',
+      'Production patterns',
+    ],
   },
   {
     tag: 'Orchestration',
     name: 'LangGraph',
-    accent: '#2563eb',
+    icon: <FiShare2 />,
+    accent: '#6c4ff2',
+    level: 'Advanced',
+    duration: '2 days',
+    format: 'Live / Remote',
     summary:
       'Design stateful, multi-agent systems with cycles, human-in-the-loop, and durable execution.',
-    topics: ['Graph-based agents', 'State & persistence', 'Human-in-the-loop', 'Multi-agent collaboration'],
+    topics: [
+      'Graph-based agents',
+      'State & persistence',
+      'Human-in-the-loop',
+      'Multi-agent collaboration',
+    ],
   },
 ]
 
@@ -53,72 +98,59 @@ export default function Training() {
         </div>
 
         <Row className="g-4 mt-2">
-          {tracks.map((t) => (
+          {tracks.map((t, idx) => (
             <Col md={6} key={t.name} className="zp-reveal">
-              <div
-                className="zp-card h-100"
-                style={{ borderTop: `4px solid ${t.accent}` }}
-              >
-                <div className="d-flex align-items-center justify-content-between">
-                  <div>
+              <article className="zp-track-card h-100">
+                <div className="d-flex align-items-start justify-content-between">
+                  <div className="d-flex align-items-center gap-3">
                     <span
-                      style={{
-                        fontSize: '0.74rem',
-                        fontWeight: 700,
-                        letterSpacing: '0.1em',
-                        textTransform: 'uppercase',
-                        color: 'var(--zp-muted)',
-                      }}
+                      className="zp-track-icon"
+                      style={{ background: `${t.accent}14`, color: t.accent }}
+                      aria-hidden
                     >
-                      {t.tag}
+                      {t.icon}
                     </span>
-                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '2px 0 0' }}>
-                      {t.name}
-                    </h3>
+                    <div>
+                      <span className="zp-track-tag">{t.tag}</span>
+                      <h3 className="zp-track-name">{t.name}</h3>
+                    </div>
                   </div>
-                  <span
-                    aria-hidden
-                    style={{
-                      width: 46,
-                      height: 46,
-                      borderRadius: 12,
-                      background: `${t.accent}1a`,
-                      color: t.accent,
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontWeight: 800,
-                      fontFamily: "'Plus Jakarta Sans', sans-serif",
-                      fontSize: '1.2rem',
-                    }}
-                  >
-                    {t.name[0]}
+                  <span className="zp-track-index" aria-hidden>
+                    {String(idx + 1).padStart(2, '0')}
                   </span>
                 </div>
 
-                <p style={{ color: 'var(--zp-muted)', margin: '14px 0 16px' }}>
-                  {t.summary}
-                </p>
+                <p className="zp-track-summary">{t.summary}</p>
 
-                <div className="d-flex flex-wrap gap-2">
-                  {t.topics.map((topic) => (
-                    <span
-                      key={topic}
-                      style={{
-                        fontSize: '0.82rem',
-                        fontWeight: 500,
-                        color: 'var(--zp-ink)',
-                        background: '#fff',
-                        border: '1px solid var(--zp-line)',
-                        borderRadius: 999,
-                        padding: '6px 12px',
-                      }}
-                    >
-                      {topic}
-                    </span>
-                  ))}
+                <div className="zp-track-meta">
+                  <span>
+                    <FiBarChart2 style={{ color: t.accent }} /> {t.level}
+                  </span>
+                  <span>
+                    <FiClock style={{ color: t.accent }} /> {t.duration}
+                  </span>
+                  <span>
+                    <FiVideo style={{ color: t.accent }} /> {t.format}
+                  </span>
                 </div>
-              </div>
+
+                <div className="zp-track-divider" />
+
+                <p className="zp-track-learn-label">What you'll learn</p>
+                <ul className="zp-track-topics">
+                  {t.topics.map((topic) => (
+                    <li key={topic}>{topic}</li>
+                  ))}
+                </ul>
+
+                <a
+                  href="#contact"
+                  className="zp-track-link"
+                  style={{ color: t.accent }}
+                >
+                  View curriculum <FiArrowRight />
+                </a>
+              </article>
             </Col>
           ))}
         </Row>
