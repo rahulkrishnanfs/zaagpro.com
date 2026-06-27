@@ -314,6 +314,12 @@ a {
 .zp-toggle.navbar-toggler:focus {
   box-shadow: 0 0 0 3px rgba(108, 79, 242, 0.25);
 }
+/* Show the hamburger only on tablet & mobile (below the lg breakpoint) */
+@media (min-width: 992px) {
+  .zp-toggle.navbar-toggler {
+    display: none;
+  }
+}
 .zp-toggle .zp-toggle-bar {
   display: block;
   width: 22px;

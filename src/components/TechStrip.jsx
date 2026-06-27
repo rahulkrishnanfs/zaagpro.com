@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap'
 
-const tools = ['Claude', 'Cursor', 'LangChain', 'LangGraph', 'OpenAI', 'Anthropic', 'Pinecone', 'AWS Bedrock']
+const tools = ['Claude', 'Cursor', 'LangChain', 'LangGraph', 'OpenAI', 'Anthropic', 'Strands Agents', 'Google ADK', 'AWS Bedrock']
 
 export default function TechStrip() {
   return (
