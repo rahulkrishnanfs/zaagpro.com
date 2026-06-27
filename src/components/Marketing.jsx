@@ -31,13 +31,6 @@ const pillars = [
   },
 ]
 
-const outcomes = [
-  { value: '3.5x', label: 'Content output' },
-  { value: '-60%', label: 'Cost per lead' },
-  { value: '+42%', label: 'Engagement rate' },
-  { value: '+28%', label: 'Revenue uplift' },
-]
-
 export default function Marketing() {
   return (
     <section id="marketing" className="zp-section">
@@ -79,60 +72,31 @@ export default function Marketing() {
             boxShadow: 'var(--zp-shadow)',
           }}
         >
-          <Row className="align-items-center g-4">
-            <Col lg={5}>
-              <span
-                className="d-inline-flex align-items-center gap-2"
-                style={{ fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.9 }}
-              >
-                <FiTrendingUp /> Real outcomes
-              </span>
-              <h3 className="mt-2" style={{ color: '#fff', fontWeight: 800, fontSize: '1.65rem' }}>
-                Marketing that pays for itself
-              </h3>
-              <p style={{ color: 'rgba(255,255,255,0.85)', marginBottom: 0 }}>
-                From content engines to performance campaigns, our AI-driven
-                approach drives engagement and revenue you can measure.
-              </p>
-              <a
-                href="#contact"
-                className="btn mt-3 d-inline-flex align-items-center gap-2"
-                style={{ background: '#fff', color: 'var(--zp-green-700)', fontWeight: 700, borderRadius: 12, padding: '11px 22px' }}
-              >
-                Boost my marketing <FiArrowRight />
-              </a>
-            </Col>
-            <Col lg={7}>
-              <Row className="g-3">
-                {outcomes.map((o) => (
-                  <Col xs={6} md={3} key={o.label}>
-                    <div
-                      style={{
-                        background: 'rgba(255,255,255,0.12)',
-                        border: '1px solid rgba(255,255,255,0.22)',
-                        borderRadius: 14,
-                        padding: '18px 14px',
-                        textAlign: 'center',
-                      }}
-                    >
-                      <div
-                        style={{
-                          fontFamily: "'Plus Jakarta Sans', sans-serif",
-                          fontWeight: 800,
-                          fontSize: '1.7rem',
-                        }}
-                      >
-                        {o.value}
-                      </div>
-                      <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.85)' }}>
-                        {o.label}
-                      </div>
-                    </div>
-                  </Col>
-                ))}
-              </Row>
-            </Col>
-          </Row>
+          <div className="text-center">
+            <span
+              className="d-inline-flex align-items-center gap-2"
+              style={{ fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.9 }}
+            >
+              <FiTrendingUp /> Real outcomes
+            </span>
+            <h3 className="mt-2" style={{ color: '#fff', fontWeight: 800, fontSize: '1.75rem' }}>
+              Marketing that pays for itself
+            </h3>
+            <p
+              className="mx-auto"
+              style={{ color: 'rgba(255,255,255,0.85)', marginBottom: 0, maxWidth: 620 }}
+            >
+              From content engines to performance campaigns, our AI-driven
+              approach drives engagement and revenue you can measure.
+            </p>
+            <a
+              href="#contact"
+              className="btn mt-4 d-inline-flex align-items-center gap-2"
+              style={{ background: '#fff', color: 'var(--zp-green-700)', fontWeight: 700, borderRadius: 12, padding: '11px 22px' }}
+            >
+              Boost my marketing <FiArrowRight />
+            </a>
+          </div>
         </div>
       </Container>
     </section>

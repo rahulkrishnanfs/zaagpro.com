@@ -8,6 +8,9 @@ import {
   FiCode,
   FiLink,
   FiShare2,
+  FiTerminal,
+  FiBox,
+  FiServer,
 } from 'react-icons/fi'
 
 const tracks = [
@@ -77,6 +80,57 @@ const tracks = [
       'State & persistence',
       'Human-in-the-loop',
       'Multi-agent collaboration',
+    ],
+  },
+  {
+    tag: 'Language',
+    name: 'Python',
+    icon: <FiTerminal />,
+    accent: '#4f46e5',
+    level: 'Beginner → Advanced',
+    duration: '3 days',
+    format: 'Live / Remote',
+    summary:
+      'Build the Python foundation behind modern AI engineering — from core language to async, APIs, and data workflows.',
+    topics: [
+      'Core Python & OOP',
+      'Async & concurrency',
+      'APIs & data handling',
+      'Testing & packaging',
+    ],
+  },
+  {
+    tag: 'Containers',
+    name: 'Docker',
+    icon: <FiBox />,
+    accent: '#0ea5e9',
+    level: 'Beginner → Intermediate',
+    duration: '1 day',
+    format: 'Live / Remote',
+    summary:
+      'Containerize applications and AI services for consistent, portable deployments across any environment.',
+    topics: [
+      'Images & containers',
+      'Dockerfiles & multi-stage builds',
+      'Networking & volumes',
+      'Compose & registries',
+    ],
+  },
+  {
+    tag: 'Container Orchestration',
+    name: 'Kubernetes',
+    icon: <FiServer />,
+    accent: '#2563eb',
+    level: 'Intermediate → Advanced',
+    duration: '3 days',
+    format: 'Live / Remote',
+    summary:
+      'Deploy, scale, and operate containerized workloads in production with Kubernetes best practices.',
+    topics: [
+      'Pods, deployments & services',
+      'Scaling & self-healing',
+      'Config, secrets & storage',
+      'Helm & observability',
     ],
   },
 ]

@@ -24,13 +24,6 @@ const reasons = [
   },
 ]
 
-const stats = [
-  { value: '50+', label: 'Agentic deployments' },
-  { value: '1,200+', label: 'Engineers trained' },
-  { value: '4.1x', label: 'Avg. delivery speedup' },
-  { value: '98%', label: 'Client satisfaction' },
-]
-
 export default function About() {
   return (
     <section id="about" className="zp-section zp-bg-soft">
@@ -42,40 +35,11 @@ export default function About() {
               Your partner for the{' '}
               <span className="zp-text-gradient">agentic shift</span>
             </h2>
-            <p className="zp-lead">
+            <p className="zp-lead mb-0">
               We exist to help enterprises move beyond experiments and into
               dependable, value-generating agentic systems — while building the
               internal capability to keep innovating.
             </p>
-
-            <Row className="g-3 mt-2">
-              {stats.map((s) => (
-                <Col xs={6} key={s.label}>
-                  <div
-                    style={{
-                      background: '#fff',
-                      border: '1px solid var(--zp-line)',
-                      borderRadius: 14,
-                      padding: '16px 18px',
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontFamily: "'Plus Jakarta Sans', sans-serif",
-                        fontWeight: 800,
-                        fontSize: '1.6rem',
-                        color: 'var(--zp-ink)',
-                      }}
-                    >
-                      {s.value}
-                    </div>
-                    <div style={{ fontSize: '0.85rem', color: 'var(--zp-muted)' }}>
-                      {s.label}
-                    </div>
-                  </div>
-                </Col>
-              ))}
-            </Row>
           </Col>
 
           <Col lg={7} className="zp-reveal">

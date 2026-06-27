@@ -27,6 +27,9 @@ const groups = [
       { label: 'Cursor', href: '#training' },
       { label: 'LangChain', href: '#training' },
       { label: 'LangGraph', href: '#training' },
+      { label: 'Python', href: '#training' },
+      { label: 'Docker', href: '#training' },
+      { label: 'Kubernetes', href: '#training' },
     ],
   },
   {
